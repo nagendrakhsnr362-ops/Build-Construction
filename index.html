@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Challenge - Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- Left Side -->
+        <div class="quiz-info">
+
+            <div class="logo">🧠</div>
+
+            <h1>Quiz Challenge</h1>
+
+            <p>
+                Test your knowledge, challenge yourself,
+                and become the quiz champion!
+            </p>
+
+            <div class="features">
+                <div>🏆 Win Rewards</div>
+                <div>⏱️ Beat the Timer</div>
+                <div>🎯 Improve Your Score</div>
+            </div>
+
+        </div>
+
+
+        <!-- Right Side -->
+        <div class="login-box">
+
+            <h2>Welcome Back!</h2>
+
+            <p class="subtitle">
+                Login to continue your quiz journey
+            </p>
+
+
+            <!-- Login Form -->
+            <form onsubmit="return loginUser()">
+
+                <!-- Email -->
+                <div class="input-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Options -->
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input type="checkbox">
+
+                        Remember me
+
+                    </label>
+
+                    <a href="#">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <!-- Login Button -->
+                <button
+                    type="submit"
+                    class="login-btn"
+                >
+                    LOGIN NOW
+                </button>
+
+            </form>
+
+
+            <!-- Divider -->
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+
+            <!-- Google Login -->
+            <button
+                type="button"
+                class="google-btn"
+            >
+                <span>G</span>
+                Continue with Google
+            </button>
+
+
+            <!-- Register -->
+            <p class="register">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Register Now
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Login JavaScript -->
+    <script>
+
+        function loginUser() {
+
+            // Get entered values
+            const email =
+                document.getElementById("email").value.trim();
+
+            const password =
+                document.getElementById("password").value;
+
+
+            // Correct login details
+            const correctEmail = "abc@gmail.com";
+            const correctPassword = "1234";
+
+
+            // Check login
+            if (
+                email === correctEmail &&
+                password === correctPassword
+            ) {
+
+                alert("Login successful! Welcome to Quiz Challenge.");
+
+                // Open dashboard
+                window.location.href = "dashboard.html";
+
+            } else {
+
+                alert("Invalid email or password!");
+
+            }
+
+
+            // Prevent form refresh
+            return false;
+
+        }
+
+    </script>
+
+</body>
+</html>

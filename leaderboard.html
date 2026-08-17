@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Challenge - Leaderboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 30px 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 18px 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 25px;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            background: #667eea;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #4f63c5;
+        }
+
+        /* Title */
+        .title {
+            text-align: center;
+            color: white;
+            margin-bottom: 25px;
+        }
+
+        .title h2 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .title p {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        /* Leaderboard */
+        .leaderboard {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .table-header,
+        .player {
+            display: grid;
+            grid-template-columns: 80px 1fr 120px 120px;
+            align-items: center;
+            padding: 18px 25px;
+        }
+
+        .table-header {
+            background: #667eea;
+            color: white;
+            font-weight: bold;
+        }
+
+        .player {
+            border-bottom: 1px solid #eee;
+            transition: 0.3s;
+        }
+
+        .player:hover {
+            background: #f5f6ff;
+        }
+
+        .player:last-child {
+            border-bottom: none;
+        }
+
+        .rank {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .player-name {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #667eea;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .score {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .points {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Top 3 */
+        .first {
+            background: #fff8dc;
+        }
+
+        .second {
+            background: #f5f5f5;
+        }
+
+        .third {
+            background: #fff0e0;
+        }
+
+        .medal {
+            font-size: 22px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px 10px;
+            }
+
+            .header {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .back-btn {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+
+            .title h2 {
+                font-size: 26px;
+            }
+
+            .table-header,
+            .player {
+                grid-template-columns: 55px 1fr 70px 70px;
+                padding: 15px 12px;
+                font-size: 13px;
+            }
+
+            .avatar {
+                width: 32px;
+                height: 32px;
+                font-size: 12px;
+            }
+
+            .player-name {
+                gap: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>🧠 Quiz Challenge</h1>
+
+            <a href="dashboard.html" class="back-btn">
+                ← Dashboard
+            </a>
+        </div>
+
+        <!-- Page Title -->
+        <div class="title">
+            <h2>🏆 Leaderboard</h2>
+            <p>Top players in the Quiz Challenge</p>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="leaderboard">
+
+            <!-- Table Header -->
+            <div class="table-header">
+                <div>Rank</div>
+                <div>Player</div>
+                <div>Score</div>
+                <div>Points</div>
+            </div>
+
+            <!-- Player 1 -->
+            <div class="player first">
+                <div class="rank medal">🥇</div>
+
+                <div class="player-name">
+                    <div class="avatar">A</div>
+                    <span>Arun Kumar</span>
+                </div>
+
+                <div class="score">98%</div>
+                <div class="points">980</div>
+            </div>
+
+            <!-- Player 2 -->
+            <div class="player second">
+                <div class="rank medal">🥈</div>
+
+                <div class="player-name">
+                    <div class="avatar">R</div>
+                    <span>Rahul Sharma</span>
+                </div>
+
+                <div class="score">95%</div>
+                <div class="points">950</div>
+            </div>
+
+            <!-- Player 3 -->
+            <div class="player third">
+                <div class="rank medal">🥉</div>
+
+                <div class="player-name">
+                    <div class="avatar">P</div>
+                    <span>Priya Singh</span>
+                </div>
+
+                <div class="score">92%</div>
+                <div class="points">920</div>
+            </div>
+
+            <!-- Player 4 -->
+            <div class="player">
+                <div class="rank">4</div>
+
+                <div class="player-name">
+                    <div class="avatar">V</div>
+                    <span>Vikram Patel</span>
+                </div>
+
+                <div class="score">89%</div>
+                <div class="points">890</div>
+            </div>
+
+            <!-- Player 5 -->
+            <div class="player">
+                <div class="rank">5</div>
+
+                <div class="player-name">
+                    <div class="avatar">S</div>
+                    <span>Sneha Reddy</span>
+                </div>
+
+                <div class="score">86%</div>
+                <div class="points">860</div>
+            </div>
+
+            <!-- Player 6 -->
+            <div class="player">
+                <div class="rank">6</div>
+
+                <div class="player-name">
+                    <div class="avatar">K</div>
+                    <span>Kiran Rao</span>
+                </div>
+
+                <div class="score">84%</div>
+                <div class="points">840</div>
+            </div>
+
+            <!-- Player 7 -->
+            <div class="player">
+                <div class="rank">7</div>
+
+                <div class="player-name">
+                    <div class="avatar">N</div>
+                    <span>Naveen Kumar</span>
+                </div>
+
+                <div class="score">81%</div>
+                <div class="points">810</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

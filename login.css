@@ -1,0 +1,480 @@
+/* ==============================
+   QUIZ CHALLENGE - LOGIN CSS
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px;
+}
+
+/* ==============================
+   LOGIN CONTAINER
+   ============================== */
+
+.login-container {
+    width: 100%;
+    max-width: 950px;
+    min-height: 550px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* ==============================
+   LEFT SIDE
+   ============================== */
+
+.quiz-info {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+
+    color: white;
+
+    padding: 50px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quiz-logo {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.quiz-info h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.quiz-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* Features */
+
+.quiz-features {
+    list-style: none;
+}
+
+.quiz-features li {
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 15px;
+}
+
+.quiz-features li span {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    border-radius: 50%;
+}
+
+/* ==============================
+   RIGHT SIDE
+   ============================== */
+
+.login-box {
+    padding: 50px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-box h2 {
+    color: #222;
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+/* ==============================
+   INPUT GROUP
+   ============================== */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    color: #333;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.input-wrapper input:focus {
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* ==============================
+   PASSWORD EYE BUTTON
+   ============================== */
+
+.password-toggle {
+    position: absolute;
+
+    right: 12px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    color: #777;
+}
+
+/* ==============================
+   LOGIN OPTIONS
+   ============================== */
+
+.login-options {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+
+    font-size: 13px;
+}
+
+.remember-me {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #666;
+}
+
+.remember-me input {
+    accent-color: #4f46e5;
+}
+
+.forgot-password {
+    color: #4f46e5;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   LOGIN BUTTON
+   ============================== */
+
+.login-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #4338ca;
+
+    transform: translateY(-1px);
+}
+
+/* ==============================
+   DIVIDER
+   ============================== */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    margin: 23px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #ddd;
+}
+
+/* ==============================
+   GOOGLE BUTTON
+   ============================== */
+
+.google-btn {
+    width: 100%;
+
+    padding: 13px;
+
+    background: #ffffff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 9px;
+
+    color: #333;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.google-btn:hover {
+    background: #f8fafc;
+
+    border-color: #bbb;
+}
+
+/* ==============================
+   REGISTER LINK
+   ============================== */
+
+.register-text {
+    text-align: center;
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-top: 22px;
+}
+
+.register-text a {
+    color: #4f46e5;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   ERROR MESSAGE
+   ============================== */
+
+.error-message {
+    display: none;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    padding: 10px 12px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   SUCCESS MESSAGE
+   ============================== */
+
+.success-message {
+    display: none;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    padding: 10px 12px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   TABLET
+   ============================== */
+
+@media (max-width: 800px) {
+
+    .login-container {
+        max-width: 500px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-info {
+        padding: 35px;
+
+        text-align: center;
+    }
+
+    .quiz-info h1 {
+        font-size: 30px;
+    }
+
+    .quiz-features {
+        display: none;
+    }
+
+    .login-box {
+        padding: 40px 35px;
+    }
+}
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .login-container {
+        border-radius: 15px;
+    }
+
+    .quiz-info {
+        padding: 25px 20px;
+    }
+
+    .quiz-logo {
+        font-size: 40px;
+    }
+
+    .quiz-info h1 {
+        font-size: 25px;
+    }
+
+    .quiz-info p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .login-box {
+        padding: 30px 22px;
+    }
+
+    .login-box h2 {
+        font-size: 25px;
+    }
+
+    .login-options {
+        font-size: 12px;
+    }
+
+    .login-btn {
+        padding: 13px;
+    }
+}
